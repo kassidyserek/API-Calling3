@@ -14,6 +14,7 @@
 		3F570CE327FCAE7A0053200C /* API_Calling3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F570CE227FCAE7A0053200C /* API_Calling3Tests.swift */; };
 		3F570CED27FCAE7A0053200C /* API_Calling3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F570CEC27FCAE7A0053200C /* API_Calling3UITests.swift */; };
 		3F570CEF27FCAE7A0053200C /* API_Calling3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F570CEE27FCAE7A0053200C /* API_Calling3UITestsLaunchTests.swift */; };
+		3FAC3D2D27FDEEF8000A33EF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC3D2C27FDEEF8000A33EF /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3F570CE827FCAE7A0053200C /* API Calling3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "API Calling3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F570CEC27FCAE7A0053200C /* API_Calling3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Calling3UITests.swift; sourceTree = "<group>"; };
 		3F570CEE27FCAE7A0053200C /* API_Calling3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Calling3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FAC3D2C27FDEEF8000A33EF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				3F570CD127FCAE740053200C /* API_Calling3App.swift */,
 				3F570CD327FCAE740053200C /* ContentView.swift */,
+				3FAC3D2C27FDEEF8000A33EF /* SwiftyJSON.swift */,
 				3F570CD527FCAE790053200C /* Assets.xcassets */,
 				3F570CD727FCAE7A0053200C /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAC3D2D27FDEEF8000A33EF /* SwiftyJSON.swift in Sources */,
 				3F570CD427FCAE740053200C /* ContentView.swift in Sources */,
 				3F570CD227FCAE740053200C /* API_Calling3App.swift in Sources */,
 			);
