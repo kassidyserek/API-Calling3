@@ -12,16 +12,16 @@ struct ContentView: View {
     @State private var showingAlert = false
     var body: some View {
         NavigationView {
-                   List(facts) { fact in
-                       NavigationLink(
-                        destination: Text(fact.verified)
-                               .padding(),
-                           label: {
-                               Text(fact.text)
-                           })
-                   }
-                   .navigationTitle("Cat Facts")
-               }
+            List(facts) { fact in
+                NavigationLink(
+                    destination: Text(fact.source)
+                        .padding(),
+                    label: {
+                        Text(fact.text)
+                    })
+            }
+            .navigationTitle("Cat Facts")
+        }
         .onAppear(perform: {
             getFacts()
         })
@@ -30,23 +30,21 @@ struct ContentView: View {
                   message: Text("There was a problem loading the data"),
                   dismissButton: .default(Text("OK")))
         })
-}
+    }
     func getFacts() {
         let apiKey = "?rapidapi-key=dcdeb11b82msh92bdd760de21315p1ddd5djsnd15d938d1e5b"
         let query = "https://brianiswu-cat-facts-v1.p.rapidapi.com/facts\(apiKey)"
         if let url = URL(string: query) {
             if let data = try? Data(contentsOf: url) {
                 let json = try! JSON(data: data)
-                if json["success"] == true {
-                    let contents = json["body"].arrayValue
-                    for item in contents {
-                        let text = item["text"].stringValue
-                        let verified = item["verified"].stringValue
-                        let fact = Fact(text: text, verified: verified)
-                        facts.append(fact)
-                    }
-                    return
+                let contents = json.arrayValue
+                for item in contents {
+                    let text = item["text"].stringValue
+                    let source = item["source"].stringValue
+                    let fact = Fact(text: text, source: source)
+                    facts.append(fact)
                 }
+                return
             }
         }
         showingAlert = true
@@ -56,7 +54,7 @@ struct ContentView: View {
 struct Fact: Identifiable {
     let id = UUID()
     var text: String
-    var verified: String
+    var source: String
 }
 
 struct ContentView_Previews: PreviewProvider {
