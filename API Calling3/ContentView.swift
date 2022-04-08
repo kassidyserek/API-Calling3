@@ -14,13 +14,13 @@ struct ContentView: View {
         NavigationView {
             List(facts) { fact in
                 NavigationLink(
-                    destination: Text(fact.source)
+                    destination: Text("Source: \(fact.source)")
                         .padding(),
                     label: {
                         Text(fact.text)
                     })
             }
-            .navigationTitle("Cat Facts")
+            .navigationTitle("Daily Cat Facts")
         }
         .onAppear(perform: {
             getFacts()
